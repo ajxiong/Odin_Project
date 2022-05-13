@@ -1,5 +1,28 @@
-div {
+/* for CSS_foundations 1 */
+#f1 {
     color : white;
     background-color: red;
     font-size: 32px;
+}
+
+/*CSS Foundations 2*/
+.class1 {
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div#id1 {
+    color: blue;
+    font-size: 36px;
+}
+
+.class2 {
+    background-color: pink;
+    font-size: 24px;
+}
+
+#id2 {
+    background-color: lightgreen;
+    font-size: 24px;
+    font-weight: bold;
 }
