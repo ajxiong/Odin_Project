@@ -1,0 +1,13 @@
+.curryHead {
+    color:red;
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+h2 {
+    color: green;
+    background-color: lightblue;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
