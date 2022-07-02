@@ -24,19 +24,31 @@
     display:flex;
     margin:0px;
     padding: 0px;
+    gap: 20px;
 }
 
 .headerBodyContainer {
     display:flex;
     padding: 50px;
     margin: 50px;
+    justify-content: space-between;
+    justify-content: center;
+    gap:425px;
 }
 
-..miniContainer {
+.miniContainer {
+    justify-content: space-between;
+    width:500px;
 }
+
+ .headerTitle {
+    margin-bottom: 20px;
+ }
+ 
 
 .headerContent {
     color:#e5e7eb;
+    margin-bottom: 20px;
 }
 
 .headerTitle {
@@ -44,10 +56,16 @@
     font-size: 48px;
 }
 
-button {
+
+.button1 {
     background-color: #3882f6;
     border: none;
     border-radius: 8px;
+    height:50px;
+    width: 150px;
+    color:#e5e7eb;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .quote {
@@ -59,8 +77,15 @@ button {
 }
 
 .headerImage {
+    display: flex;
     background-color: #e5e7eb;
-    font-size: 36px;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagePlace {
     color: #1f2937;
     font-style: italic;
+    text-align: center;
 }
