@@ -16,30 +16,70 @@ function computerPlay() {
 }
 
 function playerPlay(){
-    var choice = window.prompt("Please enter a choice osend invite rock, paper, or scissors: ");
+    var choice = window.prompt("Please enter a choice of rock, paper, or scissors: ");
     return choice;
 }
 
-let compChoice = computerPlay();
-let playerChoice = playerPlay();
+//let compChoice = computerPlay();
+//let playerChoice = playerPlay();
 
-function playRound(compChoice, playerChoice){
-    if(compChoice == playerChoice){
-        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\nno one wins, draw!");
-    }
-    else if(compChoice == "scissors" && playerChoice == "paper"){
+function playRound(){
+    let compChoice = computerPlay();
+    let playerChoice = playerPlay();
+    if(compChoice == "scissors" && playerChoice == "paper"){
          console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + compChoice + " beats " + playerChoice + "\ncomputer wins!");
+         return 1;
     }
     else if(compChoice == "paper" && playerChoice == "rock"){
         console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + compChoice + " beats " + playerChoice + "\ncomputer wins!");
+        return 1;
     }
     else if(compChoice == "rock" && playerChoice == "scissors") {
         console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + compChoice + " beats " + playerChoice + "\ncomputer wins!");
+        return 1;
+    }
+    else if(compChoice == "scissors" && playerChoice == "rock"){
+        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + playerChoice + " beats " + compChoice + "\nplayer wins!");
+        return 2;
+    }
+    else if(compChoice == "rock" && playerChoice == "paper"){
+        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + playerChoice + " beats " + compChoice + "\nplayer wins!");
+        return 2;
+    }
+    else if(compChoice == "paper" && playerChoice == "scissors"){
+        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + playerChoice + " beats " + compChoice + "\nplayer wins!");
+        return 2;
     }
     else{
-        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\n" + playerChoice + " beats " + compChoice + "\nplayer wins!");
+        console.log("computer chose " + compChoice + "\nplayer chose " + playerChoice + "\nno one wins, draw!");
     }
 }
 
-playRound(compChoice, playerChoice);
+//playRound(compChoice, playerChoice);
 
+//console.log(playRound(compChoice, playerChoice));
+
+function game(){
+    let playerScore = 0;
+    let compScore = 0;
+    for(let i = 0; i < 5; i++){
+        console.log("Round: " + (i + 1));
+        let victory = playRound();
+        if(victory == 1)
+            compScore++;
+        else
+            playerScore++;
+    }
+    console.log("Computer Score: " + compScore + " points\nPlayer Score: " + playerScore + " points");
+    if(compScore > playerScore){
+        console.log("Computer wins! Good game!");
+    }
+    else if(compScore < playerScore){
+        console.log("Player wins! Good game!");
+    }
+    else{
+        console.log("Draw! Good game!");
+    }
+}
+
+game();
